@@ -7,12 +7,33 @@
 //
 
 #import "CDDAppDelegate.h"
+#import "CDDEventsViewController.h"
+
+@import CoreData;
+
+@interface CDDAppDelegate()
+
+@property (nonatomic, readonly) NSPersistentStoreCoordinator *storeCoordinator;
+
+@property (nonatomic, readonly) NSManagedObjectContext *context;
+
+@end
 
 @implementation CDDAppDelegate
+
+@synthesize storeCoordinator = _storeCoordinator;
+@synthesize context = _context;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    UINavigationController *nvc = (UINavigationController*)self.window.rootViewController;
+    
+    CDDEventsViewController *vc = (CDDEventsViewController*)nvc.topViewController;
+    
+    vc.context = self.context;
+    
     return YES;
 }
 							
@@ -41,6 +62,49 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
+- (NSURL *)applicationDocumentsDirectory
+{
+    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+-(NSPersistentStoreCoordinator*)storeCoordinator
+{
+    if (_storeCoordinator)
+    {
+        return _storeCoordinator;
+    }
+    
+    _storeCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[NSManagedObjectModel mergedModelFromBundles:@[ [NSBundle mainBundle]]]];
+
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"MasterDetailDemo.sqlite"];
+    
+    NSError *error = nil;
+    
+    if (![_storeCoordinator addPersistentStoreWithType:NSSQLiteStoreType
+                                         configuration:nil
+                                                   URL:storeURL
+                                               options:nil
+                                                 error:&error])
+    {
+        abort();
+    }
+    return _storeCoordinator;
+}
+
+-(NSManagedObjectContext *)context
+{
+    if (_context)
+    {
+        return _context;
+    }
+    
+    _context = [[NSManagedObjectContext alloc] init];
+    _context.persistentStoreCoordinator = self.storeCoordinator;
+    
+    return _context;
 }
 
 @end
