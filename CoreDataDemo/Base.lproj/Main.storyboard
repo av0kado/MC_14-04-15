@@ -13,11 +13,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="d1g-w2-X1Q" detailTextLabel="2cp-Jj-n80" style="IBUITableViewCellStyleSubtitle" id="l8L-dv-Cnc">
+                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="d1g-w2-X1Q" detailTextLabel="2cp-Jj-n80" style="IBUITableViewCellStyleSubtitle" id="l8L-dv-Cnc">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="l8L-dv-Cnc" id="bmn-Sq-ZDT">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d1g-w2-X1Q">
@@ -47,7 +47,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="rCY-D4-Szk">
                             <connections>
                                 <action selector="addEvent:" destination="DQS-ky-8un" id="vbG-ao-2GE"/>
-                                <segue destination="pGd-Cb-JhA" kind="push" id="tt9-C7-J0t"/>
+                                <segue destination="pGd-Cb-JhA" kind="push" identifier="AddEvent" id="tt9-C7-J0t"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -56,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="746" y="77"/>
         </scene>
-        <!--View Controller - Add event-->
+        <!--Add Event View Controller - Add event-->
         <scene sceneID="52Q-oc-LjT">
             <objects>
-                <viewController id="pGd-Cb-JhA" sceneMemberID="viewController">
+                <viewController id="pGd-Cb-JhA" customClass="CDDAddEventViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cpM-qV-xza"/>
                         <viewControllerLayoutGuide type="bottom" id="HfZ-bw-zEn"/>
@@ -81,11 +81,17 @@
                                 <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="save:" destination="pGd-Cb-JhA" eventType="touchUpInside" id="Twe-aI-32g"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add event" id="D2q-tA-Ovg"/>
+                    <connections>
+                        <outlet property="eventTitle" destination="VTj-QO-Ypt" id="xHi-Yv-dVj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gaj-sV-Sau" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

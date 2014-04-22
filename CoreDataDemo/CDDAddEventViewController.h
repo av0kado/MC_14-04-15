@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol CDDAddEventViewControllerDelegate;
+
 @interface CDDAddEventViewController : UIViewController
+
+@property (nonatomic, strong) NSManagedObjectContext *context;
+@property (nonatomic, weak) id<CDDAddEventViewControllerDelegate> delegate;
+
+@end
+
+@protocol CDDAddEventViewControllerDelegate <NSObject>
+
+-(void)addEventViewControllerDidFinish:(CDDAddEventViewController*)sender;
 
 @end

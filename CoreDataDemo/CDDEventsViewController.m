@@ -7,9 +7,10 @@
 //
 
 #import "CDDEventsViewController.h"
+#import "CDDAddEventViewController.h"
 #import "Event.h"
 
-@interface CDDEventsViewController () <NSFetchedResultsControllerDelegate>
+@interface CDDEventsViewController () <NSFetchedResultsControllerDelegate, CDDAddEventViewControllerDelegate>
 
 @property (nonatomic, readonly) NSFetchedResultsController *fetchedResultsController;
 
@@ -18,6 +19,12 @@
 @implementation CDDEventsViewController
 
 @synthesize fetchedResultsController = _fetchedResultsController;
+
+
+-(void)addEventViewControllerDidFinish:(CDDAddEventViewController *)sender
+{
+    [self.navigationController popToViewController:self animated:YES];
+}
 
 -(NSFetchedResultsController *)fetchedResultsController
 {
@@ -28,7 +35,7 @@
     
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Event"];
     request.sortDescriptors = @[
-                                
+                                // sort for @"day"
                                 [NSSortDescriptor sortDescriptorWithKey:@"time"
                                                               ascending:NO]
                                 
@@ -36,7 +43,7 @@
     
     _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
 managedObjectContext:self.context
-sectionNameKeyPath:nil
+sectionNameKeyPath:nil // @"day"
 cacheName:nil];
     
     _fetchedResultsController.delegate = self;
@@ -58,21 +65,21 @@ cacheName:nil];
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    //self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
--(IBAction)addEvent:(id)sender
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    Event *event = [NSEntityDescription insertNewObjectForEntityForName:@"Event"
-                    
-                                                 inManagedObjectContext:self.context];
-    event.time = [NSDate date];
-    event.title = @"A!";
-    
-    NSError *error;
-    if (![self.context save:&error])
+    if ([segue.identifier isEqualToString:@"AddEvent"])
     {
-        
+        CDDAddEventViewController *vc = segue.destinationViewController;
+        vc.context = self.context;
+        vc.delegate = self;
+    }
+    else if ([segue.identifier isEqualToString:@"DrillDown"])
+    {
+        CDDEventsViewController *vc = segue.destinationViewController;
+        vc.context = self.context;
     }
 }
 
@@ -95,7 +102,9 @@ cacheName:nil];
     
     // Configure the cell...
     Event *event = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@", event.time, event.title];
+    cell.textLabel.text = event.title;
+    cell.detailTextLabel.text = [NSDateFormatter localizedStringFromDate:event.time
+                                                               dateStyle:NSDateFormatterLongStyle timeStyle:NSDateFormatterLongStyle];
     
     return cell;
 }

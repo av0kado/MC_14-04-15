@@ -14,13 +14,17 @@
 		C39124AD18F422EF00343D0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C39124AC18F422EF00343D0A /* main.m */; };
 		C39124B118F422EF00343D0A /* CDDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C39124B018F422EF00343D0A /* CDDAppDelegate.m */; };
 		C39124B418F422EF00343D0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39124B218F422EF00343D0A /* Main.storyboard */; };
-		C39124B718F422EF00343D0A /* CDDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39124B618F422EF00343D0A /* CDDViewController.m */; };
 		C39124B918F422EF00343D0A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39124B818F422EF00343D0A /* Images.xcassets */; };
 		C39124C018F422EF00343D0A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39124BF18F422EF00343D0A /* XCTest.framework */; };
 		C39124C118F422EF00343D0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39124A018F422EF00343D0A /* Foundation.framework */; };
 		C39124C218F422EF00343D0A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39124A418F422EF00343D0A /* UIKit.framework */; };
 		C39124CA18F422EF00343D0A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C39124C818F422EF00343D0A /* InfoPlist.strings */; };
 		C39124CC18F422EF00343D0A /* CoreDataDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C39124CB18F422EF00343D0A /* CoreDataDemoTests.m */; };
+		C39124D718F4239200343D0A /* CDDEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39124D618F4239200343D0A /* CDDEventsViewController.m */; };
+		C39124DA18F423C900343D0A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C39124D818F423C900343D0A /* Model.xcdatamodeld */; };
+		C39124DD18F4248C00343D0A /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = C39124DC18F4248C00343D0A /* Event.m */; };
+		C39124E018F42F1000343D0A /* Event+Stuff.m in Sources */ = {isa = PBXBuildFile; fileRef = C39124DF18F42F1000343D0A /* Event+Stuff.m */; };
+		C3A5DF4718FD65550072BD5B /* CDDAddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A5DF4618FD65550072BD5B /* CDDAddEventViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +49,21 @@
 		C39124AF18F422EF00343D0A /* CDDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDDAppDelegate.h; sourceTree = "<group>"; };
 		C39124B018F422EF00343D0A /* CDDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDDAppDelegate.m; sourceTree = "<group>"; };
 		C39124B318F422EF00343D0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C39124B518F422EF00343D0A /* CDDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDDViewController.h; sourceTree = "<group>"; };
-		C39124B618F422EF00343D0A /* CDDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDDViewController.m; sourceTree = "<group>"; };
 		C39124B818F422EF00343D0A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C39124BE18F422EF00343D0A /* CoreDataDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C39124BF18F422EF00343D0A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C39124C718F422EF00343D0A /* CoreDataDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoreDataDemoTests-Info.plist"; sourceTree = "<group>"; };
 		C39124C918F422EF00343D0A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C39124CB18F422EF00343D0A /* CoreDataDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataDemoTests.m; sourceTree = "<group>"; };
+		C39124D518F4239200343D0A /* CDDEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDDEventsViewController.h; sourceTree = "<group>"; };
+		C39124D618F4239200343D0A /* CDDEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDDEventsViewController.m; sourceTree = "<group>"; };
+		C39124D918F423C900343D0A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		C39124DB18F4248C00343D0A /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		C39124DC18F4248C00343D0A /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		C39124DE18F42F1000343D0A /* Event+Stuff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Event+Stuff.h"; sourceTree = "<group>"; };
+		C39124DF18F42F1000343D0A /* Event+Stuff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Event+Stuff.m"; sourceTree = "<group>"; };
+		C3A5DF4518FD65550072BD5B /* CDDAddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDDAddEventViewController.h; sourceTree = "<group>"; };
+		C3A5DF4618FD65550072BD5B /* CDDAddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDDAddEventViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +126,17 @@
 				C39124AF18F422EF00343D0A /* CDDAppDelegate.h */,
 				C39124B018F422EF00343D0A /* CDDAppDelegate.m */,
 				C39124B218F422EF00343D0A /* Main.storyboard */,
-				C39124B518F422EF00343D0A /* CDDViewController.h */,
-				C39124B618F422EF00343D0A /* CDDViewController.m */,
 				C39124B818F422EF00343D0A /* Images.xcassets */,
 				C39124A718F422EF00343D0A /* Supporting Files */,
+				C39124D518F4239200343D0A /* CDDEventsViewController.h */,
+				C39124D618F4239200343D0A /* CDDEventsViewController.m */,
+				C39124D818F423C900343D0A /* Model.xcdatamodeld */,
+				C39124DB18F4248C00343D0A /* Event.h */,
+				C39124DC18F4248C00343D0A /* Event.m */,
+				C39124DE18F42F1000343D0A /* Event+Stuff.h */,
+				C39124DF18F42F1000343D0A /* Event+Stuff.m */,
+				C3A5DF4518FD65550072BD5B /* CDDAddEventViewController.h */,
+				C3A5DF4618FD65550072BD5B /* CDDAddEventViewController.m */,
 			);
 			path = CoreDataDemo;
 			sourceTree = "<group>";
@@ -250,9 +268,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C39124DD18F4248C00343D0A /* Event.m in Sources */,
 				C39124B118F422EF00343D0A /* CDDAppDelegate.m in Sources */,
-				C39124B718F422EF00343D0A /* CDDViewController.m in Sources */,
+				C39124E018F42F1000343D0A /* Event+Stuff.m in Sources */,
+				C3A5DF4718FD65550072BD5B /* CDDAddEventViewController.m in Sources */,
+				C39124DA18F423C900343D0A /* Model.xcdatamodeld in Sources */,
 				C39124AD18F422EF00343D0A /* main.m in Sources */,
+				C39124D718F4239200343D0A /* CDDEventsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +477,7 @@
 				C39124D118F422EF00343D0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C39124D218F422EF00343D0A /* Build configuration list for PBXNativeTarget "CoreDataDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -463,8 +486,22 @@
 				C39124D418F422EF00343D0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C39124D818F423C900343D0A /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C39124D918F423C900343D0A /* Model.xcdatamodel */,
+			);
+			currentVersion = C39124D918F423C900343D0A /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C391249518F422EF00343D0A /* Project object */;
 }
