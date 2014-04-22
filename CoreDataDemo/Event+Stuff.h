@@ -10,7 +10,10 @@
 
 @interface Event (Stuff)
 
-+(instancetype)insertEventInContext:(NSManagedObjectContext*)context;
-+(NSArray*)eventsInContext:(NSManagedObjectContext*)context;
++(instancetype)insertEventWithTitle:(NSString*)title
+                               time:(NSDate*)time
+                          inContext:(NSManagedObjectContext*)context;
+
+//+(NSArray*)eventsInContext:(NSManagedObjectContext*)context;
 
 @end

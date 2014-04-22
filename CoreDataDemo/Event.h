@@ -2,7 +2,7 @@
 //  Event.h
 //  CoreDataDemo
 //
-//  Created by administrator on 08.04.14.
+//  Created by administrator on 22.04.14.
 //  Copyright (c) 2014 administrator. All rights reserved.
 //
 
@@ -14,5 +14,6 @@
 
 @property (nonatomic, retain) NSDate * time;
 @property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSString * day;
 
 @end

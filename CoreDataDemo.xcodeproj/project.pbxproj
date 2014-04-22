@@ -22,9 +22,9 @@
 		C39124CC18F422EF00343D0A /* CoreDataDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C39124CB18F422EF00343D0A /* CoreDataDemoTests.m */; };
 		C39124D718F4239200343D0A /* CDDEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39124D618F4239200343D0A /* CDDEventsViewController.m */; };
 		C39124DA18F423C900343D0A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C39124D818F423C900343D0A /* Model.xcdatamodeld */; };
-		C39124DD18F4248C00343D0A /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = C39124DC18F4248C00343D0A /* Event.m */; };
 		C39124E018F42F1000343D0A /* Event+Stuff.m in Sources */ = {isa = PBXBuildFile; fileRef = C39124DF18F42F1000343D0A /* Event+Stuff.m */; };
 		C3A5DF4718FD65550072BD5B /* CDDAddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A5DF4618FD65550072BD5B /* CDDAddEventViewController.m */; };
+		C3CE273219069D7400D8E374 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CE273119069D7400D8E374 /* Event.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,12 +58,13 @@
 		C39124D518F4239200343D0A /* CDDEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDDEventsViewController.h; sourceTree = "<group>"; };
 		C39124D618F4239200343D0A /* CDDEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDDEventsViewController.m; sourceTree = "<group>"; };
 		C39124D918F423C900343D0A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		C39124DB18F4248C00343D0A /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
-		C39124DC18F4248C00343D0A /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		C39124DE18F42F1000343D0A /* Event+Stuff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Event+Stuff.h"; sourceTree = "<group>"; };
 		C39124DF18F42F1000343D0A /* Event+Stuff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Event+Stuff.m"; sourceTree = "<group>"; };
 		C3A5DF4518FD65550072BD5B /* CDDAddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDDAddEventViewController.h; sourceTree = "<group>"; };
 		C3A5DF4618FD65550072BD5B /* CDDAddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDDAddEventViewController.m; sourceTree = "<group>"; };
+		C3CE273019069D7400D8E374 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		C3CE273119069D7400D8E374 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		C3CE27331906A00900D8E374 /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,9 +131,9 @@
 				C39124A718F422EF00343D0A /* Supporting Files */,
 				C39124D518F4239200343D0A /* CDDEventsViewController.h */,
 				C39124D618F4239200343D0A /* CDDEventsViewController.m */,
+				C3CE273019069D7400D8E374 /* Event.h */,
+				C3CE273119069D7400D8E374 /* Event.m */,
 				C39124D818F423C900343D0A /* Model.xcdatamodeld */,
-				C39124DB18F4248C00343D0A /* Event.h */,
-				C39124DC18F4248C00343D0A /* Event.m */,
 				C39124DE18F42F1000343D0A /* Event+Stuff.h */,
 				C39124DF18F42F1000343D0A /* Event+Stuff.m */,
 				C3A5DF4518FD65550072BD5B /* CDDAddEventViewController.h */,
@@ -268,13 +269,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C39124DD18F4248C00343D0A /* Event.m in Sources */,
 				C39124B118F422EF00343D0A /* CDDAppDelegate.m in Sources */,
 				C39124E018F42F1000343D0A /* Event+Stuff.m in Sources */,
 				C3A5DF4718FD65550072BD5B /* CDDAddEventViewController.m in Sources */,
 				C39124DA18F423C900343D0A /* Model.xcdatamodeld in Sources */,
 				C39124AD18F422EF00343D0A /* main.m in Sources */,
 				C39124D718F4239200343D0A /* CDDEventsViewController.m in Sources */,
+				C3CE273219069D7400D8E374 /* Event.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,9 +495,10 @@
 		C39124D818F423C900343D0A /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				C3CE27331906A00900D8E374 /* Model 2.xcdatamodel */,
 				C39124D918F423C900343D0A /* Model.xcdatamodel */,
 			);
-			currentVersion = C39124D918F423C900343D0A /* Model.xcdatamodel */;
+			currentVersion = C3CE27331906A00900D8E374 /* Model 2.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -83,10 +83,15 @@
     
     NSError *error = nil;
     
+    NSDictionary *options = @{
+                              NSMigratePersistentStoresAutomaticallyOption : @YES,
+                              NSInferMappingModelAutomaticallyOption : @YES
+                              };
+    
     if (![_storeCoordinator addPersistentStoreWithType:NSSQLiteStoreType
                                          configuration:nil
                                                    URL:storeURL
-                                               options:nil
+                                               options:options
                                                  error:&error])
     {
         abort();

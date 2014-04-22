@@ -2,7 +2,7 @@
 //  Event.m
 //  CoreDataDemo
 //
-//  Created by administrator on 08.04.14.
+//  Created by administrator on 22.04.14.
 //  Copyright (c) 2014 administrator. All rights reserved.
 //
 
@@ -13,5 +13,6 @@
 
 @dynamic time;
 @dynamic title;
+@dynamic day;
 
 @end

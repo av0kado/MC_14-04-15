@@ -39,11 +39,10 @@
 
 - (IBAction)save:(id)sender
 {
-    Event *event = [NSEntityDescription insertNewObjectForEntityForName:@"Event"
-                    
-                                                 inManagedObjectContext:self.context];
-    event.time = [NSDate date];
-    event.title = self.eventTitle.text;
+    [Event insertEventWithTitle:self.eventTitle.text
+                           time:[NSDate date]
+                      inContext:self.context];
+    
     //event.day = @"YYYYMMDD"
     
     NSError *error;

@@ -36,6 +36,8 @@
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Event"];
     request.sortDescriptors = @[
                                 // sort for @"day"
+                                [NSSortDescriptor sortDescriptorWithKey:@"day"
+                                                              ascending:NO],
                                 [NSSortDescriptor sortDescriptorWithKey:@"time"
                                                               ascending:NO]
                                 
@@ -43,7 +45,7 @@
     
     _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
 managedObjectContext:self.context
-sectionNameKeyPath:nil // @"day"
+sectionNameKeyPath:@"day" // @"day"
 cacheName:nil];
     
     _fetchedResultsController.delegate = self;
@@ -84,6 +86,15 @@ cacheName:nil];
 }
 
 #pragma mark - Table view data source
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    id<NSFetchedResultsSectionInfo> sectionInfo = self.fetchedResultsController.sections[section];
+    
+    // parse [sectionInfo name]
+    
+    return [sectionInfo name];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
