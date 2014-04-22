@@ -1,9 +1,0 @@
-Unit-tests
-
-если я хочу поменять модель данных - в core data есть понятие версии моделей
-
-Для работы с нетворком
-
-AFNetworking
-NSURLSession + NSJSONSerializer/NSXMLParser
-NSURLConnetion - для iOS6
